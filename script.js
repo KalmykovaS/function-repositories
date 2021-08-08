@@ -20,6 +20,7 @@ let guessNumber = function() {
       if (!isNumber(num)) {
         alert('Введи число!');
         guessNumberInner();
+        //return нам нужен, чтобы функция не пошла дальше
         return;
       } else {
         num = parseInt(num);
@@ -30,6 +31,7 @@ let guessNumber = function() {
         if (confirm('Загаданное число меньше')) {
           //если число меньше, запускаем функцию снова
           guessNumberInner();
+          //return нам нужен, чтобы функция не пошла дальше
           return;
         } else {
           //если пользователь нажал на "Отмена" выводим сообщение, что игра окончена
@@ -39,6 +41,7 @@ let guessNumber = function() {
         if (confirm('Загаданное число больше')) {
           //если число больше, запускаем функцию снова
           guessNumberInner();
+          //return нам нужен, чтобы функция не пошла дальше
           return;
         } else {
           //если пользователь нажал на "Отмена" выводим сообщение, что игра окончена
